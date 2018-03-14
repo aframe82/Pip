@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Admin registration</title>
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style type="text/css">
+            body {
+                padding-top: 40px;
+            }
+
+            .form-container {
+                width: 400px;
+                margin: auto;
+            }
+        </style>
+  </head>
+  <body>
+
+    <div class="form-container">
+
+      <h2>Admin registration</h2>
+      <hr>
+
+      {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+      {{/if}}
+      <form method="post">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Joanne" required />
+        </div>
+        <div class="form-group">
+          <label for="firstName">Last Name</label>
+          <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Bloggs" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="username" id="username" class="form-control" placeholder="joanneb@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="firstName">Password</label>
+          <input type="password" name="password" id="password" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Register</button>
+            <a href="https://www.allowpip.com/" class="btn btn-link">Cancel</a>
+        </div>
+      </form>
+    </div> <!-- /container -->
+
+  </body>
+</html>
